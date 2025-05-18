@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Smart Flashcard System</title>
+<link rel="stylesheet" href="style.css" >
+
+</head>
+<body>
+
+ <header>
+    <h1>📘 Smart Flashcard System</h1>
+  </header>
+
+  <main>
+
+    <!-- Flashcard Entry Section -->
+    <section id="add-flashcard-section" aria-labelledby="add-title">
+      <h2 id="add-title">Add a New Flashcard</h2>
+      <form id="flashcard-form">
+        <div class="form-group">
+          <label for="studentId">Student ID</label>
+          <input type="text" id="studentId" name="studentId" required />
+        </div>
+
+        <div class="form-group">
+          <label for="question">Question</label>
+          <textarea id="question" name="question" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="answer">Answer</label>
+          <textarea id="answer" name="answer" required></textarea>
+        </div>
+
+        <button type="submit">➕ Add Flashcard</button>
+      </form>
+    </section>
+
+    <!-- Retrieval Section -->
+    <section id="get-flashcards-section" aria-labelledby="get-title">
+      <h2 id="get-title">Get Flashcards</h2>
+
+      <div class="form-group">
+        <label for="limit">Number of Flashcards</label>
+        <input type="number" id="limit" name="limit" min="1" max="20" value="5" />
+      </div>
+
+      <button id="get-flashcards-btn">📄 Show Flashcards</button>
+    </section>
+
+    <!-- Display Section -->
+    <section id="flashcards-display" aria-labelledby="display-title">
+      <h2 id="display-title">Flashcards</h2>
+      <div id="flashcards-container" class="flashcard-grid"></div>
+    </section>
+
+  </main>
+
+
+<script src="script.js"></script>
+</body>
+</html>
